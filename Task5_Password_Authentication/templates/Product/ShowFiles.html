@@ -1,0 +1,15 @@
+{% extends 'Product/Base.html' %}
+
+
+  {% block title %}
+  <title>Homepage</title>
+  {% endblock %}
+
+
+
+{% block content %}
+
+    {% for i in img %}
+        <img src="{{i.Document.url}}" alt="Not available" width="{{ 400 }}" height="{{ 500 }}">
+    {% endfor %}
+{% endblock %}

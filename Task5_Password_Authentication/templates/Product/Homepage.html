@@ -1,0 +1,16 @@
+{% extends 'Product/Base.html' %}
+
+
+  {% block title %}
+  <title>Homepage</title>
+  {% endblock %}
+
+  {% block content %}
+  <h1>Homepage</h1>
+
+  <a href="{% url 'dupload' %}">
+    <h4>File Upload</h4>
+  </a>
+
+
+  {% endblock %}

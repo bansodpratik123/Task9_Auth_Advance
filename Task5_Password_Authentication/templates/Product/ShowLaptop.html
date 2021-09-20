@@ -1,0 +1,35 @@
+{% extends 'Product/Base.html' %}
+
+
+{% block title %}
+  <title>Show Laptops</title>
+{% endblock %}
+
+
+
+{% block content %}
+
+<h3>Show Laptop</h3>
+
+<div class="card mb-3 mx-5" style="max-width: 1000px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      {% for i in image %}
+      <img src="{{i.Document.url}}" alt="Image not found">
+      {% endfor %}
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        {% for r in records %}
+        <h5 class="card-title">{{r.Model_Name}}</h5>
+        <h5 class="card-title">{{r.Company}}</h5>
+        <h5 class="card-text">{{r.Processor}}, {{r.RAM}}, {{r.ROM}}</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

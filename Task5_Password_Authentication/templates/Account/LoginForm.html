@@ -1,0 +1,30 @@
+{% extends 'Product/Base.html' %}
+{% load crispy_forms_tags %}
+
+  {% block title %}
+  <title>Login</title>
+  {% endblock %}
+
+  {% block content %}
+  <div class="container">
+
+    <form method="post" class="jumbotron">
+      {% csrf_token %}
+      <label for id="un">Username</label>
+      <input type="text" id="un" name="un"><br><br>
+
+      <label for id="un">Password</label>
+      <input type="password" id="pw" name="pw"><br><br>
+
+      <a href="{% url 'changepass' %}">
+        <p>Change Password</p>
+      </a>
+      <a href="{% url 'reset_password' %}">
+        <p>Forget Password</p>
+      </a>
+
+      <button>Login</button>
+
+    </form>
+  </div>
+  {% endblock %}
